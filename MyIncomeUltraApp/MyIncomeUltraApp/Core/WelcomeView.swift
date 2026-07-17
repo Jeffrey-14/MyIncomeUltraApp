@@ -22,6 +22,9 @@ struct WelcomeView: View {
       Spacer()
       getStartedButton
     }
+    .padding()
+    .infinityFrame()
+    .background(Color.appTheme.viewBackground)
   }
 }
 
@@ -49,11 +52,11 @@ private extension WelcomeView {
   }
   
   var getStartedButton: some View {
-    Button {
-      shouldShowWelcomeView = false
-    } label: {
-      Text("Get Started")
-    }
+    Text("Get Started")
+      .primaryButton()
+      .button(.press) {
+        shouldShowWelcomeView = false
+      }
   }
 }
 
