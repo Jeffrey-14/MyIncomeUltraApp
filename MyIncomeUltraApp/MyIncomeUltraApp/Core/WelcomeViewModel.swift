@@ -11,7 +11,7 @@ import FactoryKit
 
 @MainActor
 final class WelcomeViewModel: ObservableObject {
-  @Injected(\.appinfoStore) var appInfoStore
+  @Injected(\.appInfoStore) var appInfoStore
  
   func getAppName() -> String {
     appInfoStore.name

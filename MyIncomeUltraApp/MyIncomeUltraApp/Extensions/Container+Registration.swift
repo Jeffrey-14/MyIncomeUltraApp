@@ -8,7 +8,7 @@
 import FactoryKit
 
 extension Container {
-  var appinfoStore: Factory<AppInfoLiveStore> {
+  var appInfoStore: Factory<AppInfoLiveStore> {
     self { MainActor.assumeIsolated { AppInfoLiveStore() } }.singleton
   }
   

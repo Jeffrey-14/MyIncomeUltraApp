@@ -16,7 +16,7 @@ final class IncomeViewModel: ObservableObject {
   @Published var hourlyInput: HourlyInput = .init()
   @Published var hourlyOutput: HourlyOutput = .init()
   @Injected(\.incomeStore) var incomeStore
-  @Injected(\.appinfoStore) var appInfoStore
+  @Injected(\.appInfoStore) var appInfoStore
   private var cancellables = Set<AnyCancellable>()
   
   init() {
