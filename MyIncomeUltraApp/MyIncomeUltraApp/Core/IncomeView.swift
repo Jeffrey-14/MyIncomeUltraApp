@@ -54,7 +54,7 @@ private extension IncomeView {
   @ViewBuilder
   var salaryInputView: some View {
     InputView(value: $viewModel.salaryInput.yearlyGross, info: .init(name: "Yearly Gross ($)", placeholder: "$ 65,000", required: true))
-    InputView(value: $viewModel.salaryInput.takeHomePercentage, info: .init(name: "Take Home (%)", placeholder: "83.00"))
+    InputView(value: $viewModel.salaryInput.takeHomePercentage, info: .init(name: "Take Home (%)", placeholder: "83.00 %"))
   }
   
   @ViewBuilder
@@ -76,8 +76,8 @@ private extension IncomeView {
   
   @ViewBuilder
   var hourlyOutputView: some View {
-    PayOutputView(pay: viewModel.salaryOutput.takeHomePay)
-    PayOutputView(pay: viewModel.salaryOutput.grossPay)
+    PayOutputView(pay: viewModel.hourlyOutput.takeHomePay)
+    PayOutputView(pay: viewModel.hourlyOutput.grossPay)
   }
   
   @ToolbarContentBuilder
