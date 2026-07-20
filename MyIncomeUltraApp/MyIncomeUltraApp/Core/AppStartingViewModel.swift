@@ -11,5 +11,4 @@ import Combine
 @MainActor
 final class AppStartingViewModel: ObservableObject {
   @Published var shouldShowWelcomeView: Bool = true
-  
 }

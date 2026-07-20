@@ -12,6 +12,8 @@ struct PayOutputView: View {
   
   var body: some View {
     VStack(spacing: 12) {
+      titleView
+      payView
       
     }
     .frame(maxWidth: .infinity)
@@ -26,12 +28,16 @@ private extension PayOutputView {
     Text("\(pay.incomeType.description) Pay")
       .frame(maxWidth: .infinity, alignment: .leading)
       .font(.callout)
+      .fontWeight(.semibold)
       .foregroundStyle(Color.appTheme.alternateAccent)
   }
   
   var payView: some View {
     ForEach(pay.breakdown, id: \.name) { singlePay in
       PayOutputRowView(name: singlePay.name, output: singlePay.value)
+      if singlePay != pay.breakdown.last! {
+        divider
+      }
     }
   }
   

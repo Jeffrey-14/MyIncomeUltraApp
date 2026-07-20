@@ -10,7 +10,6 @@ import SwiftUI
 struct IncomeView: View {
   @StateObject private var viewModel = IncomeViewModel()
   
-  
   var body: some View {
     incomeView
       .navigationBarTitleDisplayMode(.inline)

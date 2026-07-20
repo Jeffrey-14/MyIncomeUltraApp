@@ -20,7 +20,7 @@ struct SingleOutputView: View {
     .frame(maxWidth: .infinity)
     .padding(12)
     .background(Color.appTheme.cellBackground)
-    cornerRadius(.cell)
+    .cornerRadius(.cell)
   }
 }
 
